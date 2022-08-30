@@ -261,3 +261,33 @@ header .site_name .logo-large {
 	margin-bottom: 0;
 	padding-bottom: 32px;
 }
+.btu{
+	display: block;
+	width: 86%;
+	max-width: 440px;
+	padding: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 32px auto;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 16px;
+	font-weight: bold;
+	background: linear-gradient(to right,#57938f,#3CC1B9);
+	border-radius: 32ex;
+  }
+
+.btn_1 {
+	display: block;
+	width: 86%;
+	max-width: 440px;
+	padding: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 32px auto;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	background: linear-gradient(to right, #57938F, #3CC1B9);
+	border-radius: 32px;
+}
