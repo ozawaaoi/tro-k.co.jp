@@ -1,3 +1,3 @@
 <footer>
-	<img src="./logo-white.png" alt="有限会社TRO">
+	<img src="<?= $base ?>logo-white.png" alt="有限会社TRO">
 </footer>
