@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Yu Gothic";
+	color: #6B6350;
+}
+
+main {
+	display: block;
+}
+
+/*
+共通パーツ
+*/
+.button_1 {
+	padding: 18px;
+	padding-right: 92px;
+	background-color: #99E38F;
+	box-shadow:  0px 3px 5px rgba(0,0,0,.3);
+	font-weight: bold;
+	display: block;
+	width: fit-content;
+	box-sizing: border-box;
+	margin: auto;
+	position: relative;
+}
+
+.button_1::after {
+	content: "";
+	position: absolute;
+	right: 16px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 54px;
+	height: 24px;
+	background-image: url("arrow-right-brown.svg");
+	background-size: 100% 100%;
+	opacity: 1;
+	transition: all .25s;
+}
+
+.button_1:hover::after {
+	right: 0;
+	opacity: 0;
+}
+
+/*
+ヘッダー
+*/
+header {
+	background: #F5F5F5;
+}
+
+header > div {
+	padding: 16px 4px 12px 8px;
+	box-sizing: border-box;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+header .global_nav,
+header .aside_nav {
+	display: none;
+}
+
+header .hamburger_icon {
+	border-radius: 6px;
+	padding: 34px 6px 6px 6px;
+	font-size: 12px;
+	position: fixed;
+	right: 8px;
+	top: 4px;
+}
+
+header .hamburger_icon::before {
+	top: 10px;
+}
+
+header .site_name {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+header .site_name .sub {
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+header .site_name .logo-small {
+	width: 120px;
+	display: block;
+}
+
+header .site_name .logo-large {
+	display: none;
+}
+
+@media screen and (min-width: 500px) {
+	header .hamburger_icon,
+	header .hamburger_menu {
+		display: none;
+	}
+
+	header .global_nav,
+	header .aside_nav {
+		display: block;
+	}
+
+	header .aside_nav {
+		background: #B5946D;
+		position: fixed;
+		top: 0;
+		right: 0;
+		border-bottom-left-radius: 8px;
+		padding: 8px;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 14px;
+		z-index: 100;
+	}
+
+	header .aside_nav li:not(:last-child) {
+		border-right: solid 1px #FFF;
+	}
+
+	header .aside_nav a {
+		color: #FFF;
+		text-decoration: none;
+		position: relative;
+		z-index: 40;
+	}
+
+	header .aside_nav a::before {
+		position: absolute;
+		content: "";
+		bottom: -2px;
+		left: 0;
+		width: 1px;
+		height: 2px;
+		background: white;
+		opacity: 0;
+		transition: .2s;
+	}
+
+	header .aside_nav a:hover::before {
+		width: 100%;
+		opacity: 1;
+	}
+
+	header .aside_nav > * {
+		padding: 0 16px;
+	}
+
+	/*header .aside_nav .sns_link {
+			padding-right: 0;
+	}
+
+	header .aside_nav .sns_link a {
+			margin: 0 8px;
+	}
+
+	header .aside_nav .sns_icon {
+			width: 32px;
+			border-radius: 8px;
+	}*/
+
+	header .global_nav {
+		padding-top: 20px;
+	}
+
+	header .global_nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		width: fit-content;
+	}
+
+	header .global_nav ul li {
+			width: 30%;
+		text-align: center;
+		transition: .3s;
+	}
+
+	header .global_nav ul li:hover {
+		background: #6B6350;
+		border-radius: 32px;
+	}
+	
+	header .global_nav ul li:hover a {
+		color: #EEEADD;
+	}
+
+	header .global_nav a {
+		font-weight: bold;
+	}
+
+	header .site_name {
+		font-size: 18px;
+	}
+
+	header .site_name .logo-small {
+		display: none;
+	}
+
+	header .site_name .logo-large {
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 33px;
+	}
+}
+
+@media (min-width: 768px) {
+	header .global_nav ul {
+	width: auto;
+	}
+
+	header .global_nav ul li {
+	width: auto;
+	padding: 0 16px;
+	}
+
+}
+
+@media screen and (min-width: 1280px) {
+	header .aside_nav {
+		right: calc(50% - 640px);
+	}
+}
+
+.footer_nav ul {
+	width: 280px;
+	margin: 32px auto;
+}
+
+.footer_nav ul li {
+	width: 50%;
+	display: inline-block;
+	font-weight: bold;
+	margin: 8px 0;
+	text-align: center;
+	transition: .3s;
+}
+
+.footer_nav ul li:hover {
+	background: #6B6350;
+	border-radius: 32px;
+}
+
+.footer_nav ul li:hover a {
+	color: #EEEADD;
+}
+
+.footer .text {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 0;
+	padding-bottom: 32px;
+}
