@@ -47,6 +47,10 @@ $base = '../';
 				三協フロンテア公式サイトへ
 				<img src="../arrow-1.svg" alt="">
 			</a>
+			<a href="" target="_blank" class="btn_1">
+				三協フロンテア公式サイトへ
+				<img src="../arrow-1.svg" alt="">
+			</a>
 			
 		</section>
 		
