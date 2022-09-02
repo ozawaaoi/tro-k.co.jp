@@ -59,26 +59,15 @@ body {
 }
 
 header > div {
-	padding: 16px 4px 12px 8px;
+	padding: 8px;
 	box-sizing: border-box;
 	max-width: 1280px;
 	margin: 0 auto;
 }
 
-header > div {
-	max-width: 1280px;
-}
-
-header > div .global_nav_wrapper {
-	max-width: 1080px;
-} 
 header > div .site_name_wrapper .site_name img,
 header > div .site_name_wrapper .site_name span {
 	vertical-align: middle;
-}
-
-header > div .contact {
-	text-decoration: none;
 }
 
 header > div .site_name_wrapper .site_name {
@@ -91,29 +80,26 @@ header div > .site_name_wrapper .site_name:hover {
 	opacity: .5;
 }
 
-header > div .contact {
-	background-color: #065187;
-	color: #fff;
-	padding: 8px;
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
-	top: 0;
-	right: 0;
-	position: fixed;
+header .site_name span {
+	margin-left: 4px;
 }
 
 header .global_nav,
-header .aside_nav {
+header .contact {
 	display: none;
 }
 
 header .hamburger_icon {
-	border-radius: 6px;
-	padding: 34px 6px 6px 6px;
 	font-size: 12px;
 	position: fixed;
 	right: 8px;
-	top: 4px;
+	top: 8px;
+	padding-top: 24px;
+	background-size: 100% 22px;
+	background-repeat: no-repeat;
+	height: 16px;
+	font-weight: bold;
+	text-align: center;
 }
 
 header .hamburger_icon::before {
@@ -143,47 +129,25 @@ header .site_name .logo-large {
 	display: none;
 }
 
-@media screen and (min-width: 500px) {
-	header .hamburger_nav,
-	header .hamburger_icon {
+@media (min-width: 830px) {
+	header .hamburger_icon,
+	header .hamburger_nav {
 		display: none;
 	}
 	
 	header .global_nav,
-	header .aside_nav {
+	header .contact {
 		display: block;
 	}
 
-	header .aside_nav li:not(:last-child) {
-		border-right: solid 1px #FFF;
+	header > div {
+		padding: 16px;
 	}
 
-	header .aside_nav a {
-		color: #FFF;
-		position: relative;
-		z-index: 40;
-	}
-
-	header .aside_nav a::before {
-		position: absolute;
-		content: "";
-		bottom: -2px;
-		left: 0;
-		width: 1px;
-		height: 2px;
-		background: white;
-		opacity: 0;
-		transition: .2s;
-	}
-
-	header .aside_nav a:hover::before {
-		width: 100%;
-		opacity: 1;
-	}
-
-	header .aside_nav > * {
-		padding: 0 16px;
-	}
+	header .global_nav_wrapper {
+		max-width: 1080px;
+		margin: 0 auto;
+	} 
 
 	header .global_nav {
 		padding-top: 20px;
@@ -201,22 +165,37 @@ header .site_name .logo-large {
 	}
 
 	header .global_nav ul li {
-			width: 30%;
+		width: 25%;
 		text-align: center;
-		transition: .3s;
 	}
 
-	header .global_nav ul li:hover {
-		background: #6B6350;
-		border-radius: 32px;
-	}
-	
-	header .global_nav ul li:hover a {
-		color: #EEEADD;
-	}
-
-	header .global_nav a {
+	header .global_nav ul li a {
+		display: block;
+		width: 100%;
 		font-weight: bold;
+		color: #065187;
+		text-decoration: none;
+		transition: all .3s;
+	}
+
+	header .global_nav ul li a:hover {
+		opacity: .5;
+	}
+
+	header .contact {
+		background-color: #065187;
+		color: #fff;
+		text-decoration: none;
+		padding: 12px 12px 8px;
+		font-size: 14px;
+		box-sizing: border-box;
+		width: 140px;
+		text-align: center;
+		font-weight: bold;
+		border-radius: 0 0 12px 12px;
+		top: 0;
+		right: 0;
+		position: fixed;
 	}
 
 	header .site_name {
@@ -228,6 +207,10 @@ header .site_name .logo-large {
 		position: absolute;
 		top: 14px;
 		left: 33px;
+	}
+
+	header .site_name span {
+		margin-left: 12px;
 	}
 }
 
@@ -244,7 +227,7 @@ header .site_name .logo-large {
 }
 
 @media screen and (min-width: 1280px) {
-	header .aside_nav {
+	header > div .contact {
 		right: calc(50% - 640px);
 	}
 }
