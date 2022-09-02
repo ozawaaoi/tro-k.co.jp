@@ -94,4 +94,5 @@ $base = '../';
 	</main>
 	<?php include_once('../footer.php'); ?>
 </body>
+<script src="<?= $base ?>hamburger.js"></script>
 </html>
