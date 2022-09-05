@@ -43,10 +43,11 @@ $base = '../';
 			<div>
 				<p>ユニットハウスというと建設現場に使われることが多いイメージだが、つぎのような様々な用途にお使いいただけるものを用意していること。</p>
 			</div>
-			<a href="" target="_blank">
+			<a href="" target="_blank" class="btu">
 				三協フロンテア公式サイトへ
-				<img src="" alt="">
+				<img src="../arrow-1.svg" alt="">
 			</a>
+			
 		</section>
 		
 		<section id="about">
