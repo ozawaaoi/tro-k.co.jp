@@ -47,7 +47,6 @@ $base = '../';
 				三協フロンテア公式サイトへ
 				<img src="../arrow-1.svg" alt="">
 			</a>
-			
 		</section>
 		
 		<section id="about">
